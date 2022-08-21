@@ -1,0 +1,26 @@
+<mat-toolbar class="toolbar" color="primary">
+  <div class="toolbar__">
+    <button mat-icon-button (click)="toggleSidebar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <mat-icon [routerLink]="['/containers']" class="home">home</mat-icon>
+  <div class="options">
+    <div class="shopping-cart">
+      <a routerLink="/shopping-cart"><mat-icon class="shopping-cart">shopping_cart</mat-icon></a>
+    </div>
+    <div class="username-container" [matMenuTriggerFor]="menu">
+      <mat-icon>settings</mat-icon>
+    </div>
+  </div>
+  <mat-menu #menu="matMenu" [overlapTrigger]="false">
+    <button mat-menu-item [routerLink]="['/edit-profile']">
+      <mat-icon>edit</mat-icon>
+      <span>Edit Profile</span>
+    </button>
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>exit_to_app</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>

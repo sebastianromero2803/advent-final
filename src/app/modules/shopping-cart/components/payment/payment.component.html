@@ -1,0 +1,32 @@
+<div class="container">
+  
+    <div class="section company">
+      <h2>Company</h2>
+      <mat-form-field appearance="fill">
+        <mat-label>Trucking company name</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </div>
+  
+    <div class="section payment-source">
+      <h2>Select payment source</h2>
+      <mat-form-field appearance="fill">
+        <mat-label>Payment source</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let source of sources" [value]="source.value">
+            {{ source.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  
+    <div class="pay">
+      <button mat-raised-button>Pay now</button>
+    </div>
+  
+    <img
+        src="/assets/img/payment-source-image.png"
+        class="payment-sorces-image"
+        alt="PaymentSources"
+      />
+  </div>

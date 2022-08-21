@@ -1,0 +1,22 @@
+<div class="container">
+  <form class="login-form" [formGroup]="formLogin">
+    <img src="assets/img/advent-logo.jpg" alt="advent-Logo" class="advent-logo">
+    <div class="form-inputs">
+      <div>
+        <mat-form-field class="field">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Username" formControlName="username"/>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="field">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Password" type="password" formControlName="password"/>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="button-container">
+      <button mat-raised-button (click)="login()" class="login-button">Log In</button>
+    </div>
+  </form>
+</div>

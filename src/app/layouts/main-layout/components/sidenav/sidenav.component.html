@@ -1,0 +1,15 @@
+<mat-sidenav-container>
+    <mat-sidenav [(opened)]="opened" mode="push">
+        <div class="container">
+            <img src="assets/img/advent-logo.jpg" alt="advent-Logo" class="advent-logo">
+            <div class="buttons">
+                <button mat-raised-button class="button" [routerLink]="['/containers']">Containers</button>
+                <button mat-raised-button class="button" [routerLink]="['/shopping-cart']">Shopping-Cart</button>
+            </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>
+        <div class="footer"></div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

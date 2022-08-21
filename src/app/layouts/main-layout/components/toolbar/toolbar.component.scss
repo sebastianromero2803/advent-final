@@ -1,0 +1,16 @@
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e32726;
+}
+.home {
+    cursor: pointer;
+}
+.options {
+    display: flex;
+    flex-direction: row;
+}
+.shopping-cart {
+    color: #fff;
+    margin-right: 0.5rem;
+}

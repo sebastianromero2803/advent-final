@@ -1,0 +1,38 @@
+.container {
+    margin: 5rem;
+}
+
+.advent-logo {
+    width: 12rem;
+    height: 5.7rem;
+    margin-bottom: 3rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+    padding: 1rem;
+}
+
+.button {
+    height: 3rem;
+    margin-bottom: 1rem;
+    background-color: #e32726;
+    color: white;
+    box-shadow: 2px 2px 5px #999;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 4rem);
+    justify-content: space-between;
+}
+
+.footer {
+    height: 3rem;
+    width: 100%;
+    background-color: #e32726;
+}
