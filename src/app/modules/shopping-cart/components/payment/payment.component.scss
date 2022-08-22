@@ -4,6 +4,10 @@
     justify-content: center;
     align-items: center;
     margin: 4rem;
+    background-color: white;
+    box-shadow: 2px 2px 5px #999;
+    padding: 2rem;
+    border-radius: 0.5rem;
 }
 
 h2 {
@@ -18,15 +22,10 @@ h2 {
     margin-bottom: 2em;
 }
 
-.pay {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    button {
-        background-color: #e32726;
-        color: white;
-        box-shadow: 2px 2px 5px #999;
-    }
+.pay-button {
+    background-color: #e32726;
+    color: white;
+    box-shadow: 2px 2px 5px #999;
 }
 
 .payment-sorces-image {
@@ -35,3 +34,13 @@ h2 {
     width: 20rem;
     display: block;
 }
+
+::ng-deep .red{
+    color: #772634;
+    background: #f8d6da;
+ }
+
+ ::ng-deep .green{
+    color: #698e46;
+    background: #e0f0d6;
+ }

@@ -4,6 +4,8 @@ import { Observable } from "rxjs";
 import { HttpService } from "../http/http.service";
 
 export const TOKEN_NAME = "token";
+export const USER_NAME = "userName";
+export const USER_ID = "userId";
 
 @Injectable()
 export class AuthenticationService {
@@ -13,8 +15,24 @@ export class AuthenticationService {
     return localStorage.getItem(TOKEN_NAME) || "";
   }
 
+  getUserName(): string {
+    return localStorage.getItem(USER_NAME) || "";
+  }
+
+  getUserId(): string {
+    return localStorage.getItem(USER_ID) || "";
+  }
+
   setToken(token: string): void {
     localStorage.setItem(TOKEN_NAME, token);
+  }
+
+  setUserName(userName: string): void {
+    localStorage.setItem(USER_NAME, userName);
+  }
+
+  setUserId(userId: string): void {
+    localStorage.setItem(USER_ID, userId);
   }
 
   isTokenExpired(_token?: string): boolean {

@@ -4,6 +4,9 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 import { Router } from "@angular/router";
 import { AuthenticationService } from "@app-core/authentication/authentication.service";
 
+export const userName = '';
+export const userId = '';
+
 @Component({
   selector: "app-login-layout",
   templateUrl: "./login-layout.component.html",
@@ -31,6 +34,9 @@ export class LoginLayoutComponent implements OnInit {
   login(): void {
     this.authService.login(this.formLogin.getRawValue().username, this.formLogin.getRawValue().password).subscribe((result: any) => {
       this.authService.setToken(result.content.token);
+      this.authService.setUserName(result.content.userName);
+      this.authService.setUserId(result.content.userId);
+      console.log(this.authService.getToken(), this.authService.getUserName(), this.authService.getUserId());
       setTimeout(() => {
         this._snackBar.open("Bienvenido", "", {
           duration: 2000,

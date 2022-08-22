@@ -1,27 +1,25 @@
-<div class="container">
-  
+<form class="container" [formGroup]="paymentForm">
     <div class="section company">
       <h2>Company</h2>
       <mat-form-field appearance="fill">
         <mat-label>Trucking company name</mat-label>
-        <input matInput />
+        <input matInput placeholder="Trucking Company" formControlName="truckingCompany"/>
       </mat-form-field>
     </div>
-  
     <div class="section payment-source">
       <h2>Select payment source</h2>
       <mat-form-field appearance="fill">
         <mat-label>Payment source</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let source of sources" [value]="source.value">
-            {{ source.viewValue }}
+        <mat-select formControlName="paymentSource">
+          <mat-option *ngFor="let paymentMethod of paymentMethods" [value]="paymentMethod.value">
+            {{ paymentMethod.viewValue }}
           </mat-option>
         </mat-select>
       </mat-form-field>
     </div>
   
-    <div class="pay">
-      <button mat-raised-button>Pay now</button>
+    <div>
+      <button mat-raised-button [disabled]="!paymentForm.valid" (click)="pay()" class="pay-button">Pay now</button>
     </div>
   
     <img
@@ -29,4 +27,4 @@
         class="payment-sorces-image"
         alt="PaymentSources"
       />
-  </div>
+  </form>

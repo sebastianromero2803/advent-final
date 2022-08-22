@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ShoppingCartRoutingModule } from './shopping-cart-routing.module';
 import { ShoppingCartComponent } from './shopping-cart.component';
 import { AngularMaterialModule } from '../../shared/angular-material/angular-material.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PaymentComponent } from './components/payment/payment.component';
 
 
@@ -13,7 +13,9 @@ import { PaymentComponent } from './components/payment/payment.component';
   imports: [
     CommonModule,
     ShoppingCartRoutingModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class ShoppingCartModule { }

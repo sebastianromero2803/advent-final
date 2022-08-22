@@ -2,12 +2,11 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { ContainerService } from '@app-services/container.service';
 import { RequestMovementComponent } from './components/request-movement/request-movement.component';
 import { Container } from '../../models/container.model';
 import { Store } from '@ngrx/store';
 import { deleteMovement } from '@app-core/store/actions/movement.action';
-import { Movement, MovementsState } from '../../core/store/models/movement.model';
+import { MovementsState } from '../../core/store/models/movement.model';
 import { getContainersList } from '../../core/store/selectors/containers.selector';
 import { getMovementsInfo } from '@app-core/store/selectors/movements.selector';
 
